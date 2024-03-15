@@ -21,11 +21,11 @@ class TasksScreen extends StatelessWidget {
               ),
               SizedBox(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 12.0,top: 20),
+                  padding: const EdgeInsets.only(left: 12.0, top: 20),
                   child: DatePicker(
                     DateTime.now(),
-                    selectionColor: Colors.white,
-                    selectedTextColor: Colors.black,
+                    selectionColor: AppColors.customBlue,
+                    selectedTextColor: Colors.white,
                     initialSelectedDate: DateTime.now(),
                     locale: "en",
                     height: 95,
@@ -36,13 +36,13 @@ class TasksScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 30,
+          height: 24,
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18.0),
             child: ListView.separated(
-              itemBuilder: (context, index) =>  const TaskItemWidget(),
+              itemBuilder: (context, index) => const TaskItemWidget(),
               separatorBuilder: (context, index) => const SizedBox(
                 height: 18.0,
               ),
