@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 Widget defaultText({
   required String txt,
   double fontSize = 16,
+  Color? color
 }) =>
     Text(
       txt,
@@ -10,5 +11,6 @@ Widget defaultText({
         fontWeight: FontWeight.w700,
         fontSize: fontSize,
         fontFamily: "Poppins",
+        color: color,
       ),
     );
