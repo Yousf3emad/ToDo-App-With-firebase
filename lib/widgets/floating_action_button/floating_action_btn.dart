@@ -24,7 +24,7 @@ class FloatingActionBtn extends StatelessWidget {
         showModalBottomSheet(
           backgroundColor: themeProvider.isDark? AppColors.secondaryDarkColor : null,
           isDismissible: false,
-          isScrollControlled: true,
+          isScrollControlled: false,
           context: context,
           builder: (context) => Container(
             padding: const EdgeInsets.only(bottom: 20, left: 20.0, right: 20.0),

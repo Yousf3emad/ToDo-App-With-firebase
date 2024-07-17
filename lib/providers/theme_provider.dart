@@ -18,12 +18,7 @@ class ThemeProvider extends ChangeNotifier {
   getThemeInit() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
      isDark = sharedPreferences.getBool("isDark") ?? false;
-    print("$isDark");
-    // if (isDarkTheme == null || !isDarkTheme) {
-    //   isDark = false;
-    // } else {
-    //   isDark = true;
-    // }
     notifyListeners();
   }
+
 }

@@ -26,15 +26,20 @@ class TasksScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 6.0, top: 20),
                 child: DatePicker(
                   DateTime.now(),
-                  unSelectionColor: themeProvider.isDark? AppColors.secondaryDarkColor : Colors.white,
+                  unSelectionColor: themeProvider.isDark
+                      ? AppColors.secondaryDarkColor
+                      : Colors.white,
                   selectionColor: AppColors.customBlue,
                   selectedTextColor: Colors.white,
                   initialSelectedDate: DateTime.now(),
                   locale: "en",
                   height: 95,
-                  dateTextStyle: TextStyle(color: themeProvider.isDark? Colors.white : null),
-                  dayTextStyle: TextStyle(color: themeProvider.isDark? Colors.white : null),
-                  monthTextStyle: TextStyle(color: themeProvider.isDark? Colors.white : null),
+                  dateTextStyle: TextStyle(
+                      color: themeProvider.isDark ? Colors.white : null),
+                  dayTextStyle: TextStyle(
+                      color: themeProvider.isDark ? Colors.white : null),
+                  monthTextStyle: TextStyle(
+                      color: themeProvider.isDark ? Colors.white : null),
                 ),
               ),
             ],

@@ -35,6 +35,7 @@ class _RootScreenState extends State<RootScreen> {
           : AppColors.primaryColor,
       // App Bar.
       appBar: AppBar(
+        elevation: 0.0,
         title: Padding(
           padding: const EdgeInsets.only(top: 10, left: 20),
           child: appNameWidget(context: context, txt: titles[currentIndex]),

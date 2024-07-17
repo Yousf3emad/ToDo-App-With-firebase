@@ -55,6 +55,9 @@ dependencies:
   # Shared Preferences
   shared_preferences: ^2.2.2
 
+  # FireBase
+  firebase_core: ^3.2.0
+
 
 dev_dependencies:
   flutter_test:

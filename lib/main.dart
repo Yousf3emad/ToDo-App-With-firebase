@@ -1,15 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:todo/providers/theme_provider.dart';
 import 'package:todo/root_screen.dart';
 import 'package:todo/screens/edit_task_screen.dart';
 
 import 'consts/app_colors.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  //SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+  // SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -30,6 +34,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
+              useMaterial3: false,
               appBarTheme: AppBarTheme(
                   backgroundColor: AppColors.customBlue,
                   titleTextStyle: TextStyle(
